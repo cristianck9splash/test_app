@@ -1,0 +1,66 @@
+<ion-content>
+
+  <form (ngSubmit)="enviar()" [formGroup]="form" >
+    
+    <ion-grid class="header">
+
+      <ion-row class="image">
+          <img src="/assets/img/logo.jpg" >
+      </ion-row>
+      
+      <ion-row >
+        <ion-col>
+          <ion-list>
+            <div class="form">
+              <!--------------------INPUT EMAIL---------------------->
+              <app-input
+                name="person-outline"
+                type="email"
+                placeholder="Email" 
+                [error]="errors.name"
+                formControlName="email"
+                ngDefaultControl>
+              </app-input>
+              <ion-item *ngIf="validationInput('email')">
+                <span class="error">El email es incorrecto</span>
+              </ion-item>
+              <!------------------------------------------------------>
+
+              <!-----------------INPUT CONTRASEÑA---------------------->
+              <app-input
+                name="lock-closed-outline"
+                type="password"
+                placeholder="Contraseña" 
+                [error]="errors.name"
+                formControlName="pass"
+                ngDefaultControl>
+              </app-input>
+              <ion-item  *ngIf="validationInput('pass')">
+                <span class="error">Este campo minimo 5 caracteres</span>
+              </ion-item>
+              <!------------------------------------------------------>
+
+              <!--------------------TOGGLE RECORDAR-------------------------->
+              <ion-item>
+                <span >Recordar</span>
+                <ion-toggle
+                  checked={{myValue}}
+                  (ionChange)="myChange($event)"
+                  class="position-left-toggle" ></ion-toggle>
+              </ion-item>
+              <!------------------------------------------------------>
+            </div>
+             
+            <!--------------------BOTON ACCEDER------------------------>
+              <ion-item color="primary"  (click)="enviar()" >
+                <ion-label class="button">
+                  Acceder
+                </ion-label>
+              </ion-item>
+            <!------------------------------------------------------------>
+            </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
