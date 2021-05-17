@@ -1,16 +1,4 @@
-img {
-    clip-path: inset(0 40% 0 1%);
-    width: 190px;
-    height: 110px;
-   }
-
-.image {
-    display: block;
-    text-align: center;
-    padding-left: 90px;
-    padding-bottom: 30px;
-}
-
+//DESKTOP STYLE
 .header {
     padding-top: 40px;
     padding-bottom: 10px;
@@ -18,12 +6,48 @@ img {
     padding-right: 10px;
 }
 
+.form-backgroud {
+    background: white;
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-top: 100px;
+    padding-top: 30px;
+}
+
+.image {
+    display: block;
+    text-align: center;
+    padding-left: 75px;
+    padding-bottom: 5px;
+}
+
+.img {
+    clip-path: inset(0 40% 0 1%);
+    width: 190px;
+    height: 110px;
+    background: white;
+   }
+
+.text-label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
 .form {
     background: white;
     padding-left: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
     padding-top: 5px;
+}
+
+.icon {
+    color: rgb(211, 211, 211);
+    padding-right: 10px;
+}
+
+.error {
+    color: red;
+    -webkit-animation:slide-bottom .3s ;animation:slide-bottom .6s  both
 }
 
 .position-left-toggle {
@@ -32,34 +56,125 @@ img {
   padding: 15px;   
 }
 
-.button {
-    text-align: center;
-}
-
-.error {
-    color: red;
-    -webkit-animation:slide-bottom .3s ;animation:slide-bottom .6s  both
-}
-
- @-webkit-keyframes slide-bottom{0%{-webkit-transform:translateY(10);transform:translateY(10)}50%{-webkit-transform:translateY(100px);transform:translateY(100px)}}@keyframes slide-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0)}100%{-webkit-transform:translateY(4px);transform:translateY(4px)}}
-
-ion-list {
-    background: padding-box;
-}
-
-ion-item {
-    padding-left: 5px;
-    padding-right: 5px;
+.item-padding {
+    padding-left: 25px;
+    padding-right: 25px;
     height: 45px;
-    
+    --ion-color-test-color: white;
+}
+
+.button {
+    color: black;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid #047ccc;
+    padding: 8px 28px;
+    border-radius: 40px;
+}
+
+@-webkit-keyframes slide-bottom {
+    0%{-webkit-transform:translateY(10);transform:translateY(10)}
+    50%{-webkit-transform:translateY(100px);transform:translateY(100px)}
+}
+@keyframes slide-bottom{ 
+   0%{-webkit-transform:translateY(0);transform:translateY(0)}
+   100%{-webkit-transform:translateY(4px);transform:translateY(4px)}
+}
+
+*:focus {
+    outline: 0 !important;
 }
 
 
+//MOBILE STYLE
+@media all  and (max-width: 960px) {
+    .header {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background: transparent;
+    }
 
+    .form-backgroud {
+        background: transparent;
+        margin-left: 0;
+        margin-right: 0%;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
 
-.icon {
-    color: rgb(211, 211, 211);
-    padding-right: 10px;
+    .img {
+        clip-path: inset(0 40% 0 1%);
+        width: 190px;
+        height: 110px;
+    }
+    
+    .image {
+        display: block;
+        text-align: center;
+        padding-left: 90px;
+        padding-bottom: 30px;
+    }
+
+   .text-label {
+        visibility:hidden;
+   }
+    
+    .form {
+        background: transparent;
+        padding-left: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-top: 5px;
+    }
+
+    .icon {
+        color: rgb(211, 211, 211);
+        padding-right: 10px;
+    }
+
+    .error {
+        color: red;
+        -webkit-animation:slide-bottom .3s ;animation:slide-bottom .6s  both
+    }
+    
+    .position-left-toggle {
+      position: absolute;
+      right: 0px;
+      padding: 15px;   
+    }
+    
+    .button {
+        color: white;
+        margin: auto;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: transparent;
+        border: 0px;
+        padding: 0px 0px;
+        border-radius: 0px;
+    }
+
+    .item-padding {
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 45px;
+        background-color: #047ccc;
+        --ion-color-test-color: #047ccc;
+    }
+    
+     @-webkit-keyframes slide-bottom {
+         0%{-webkit-transform:translateY(10);transform:translateY(10)}
+         50%{-webkit-transform:translateY(100px);transform:translateY(100px)}
+    }
+    @keyframes slide-bottom{ 
+        0%{-webkit-transform:translateY(0);transform:translateY(0)}
+        100%{-webkit-transform:translateY(4px);transform:translateY(4px)}
+    }
+    
 }
 
 
