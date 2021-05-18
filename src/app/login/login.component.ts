@@ -13,12 +13,6 @@ import { emailValidator, passValidator } from '../shared/validations/custom-vali
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
-  errors = {
-    email: null,
-    pass: null,
-  };
-  myValue: boolean = false;
-
 
   constructor(
     private formBuilder: FormBuilder,
